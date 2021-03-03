@@ -27,9 +27,8 @@ function browser() {
 
 //? Script function : 
 function script(params) {
-    return src(['app/js/main.js','app/js/jquer.js'])
+    return src('app/js/main.js')
     .pipe(concat('app.min.js'))
-    .pipe(ugly())
     .pipe(dest('app/js/'))
     .pipe(browserSync.stream())
 }
